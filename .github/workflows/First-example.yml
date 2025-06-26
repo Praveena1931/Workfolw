@@ -3,8 +3,8 @@ name: first workflow
 on: push
 
 jobs:
-    first_job: 
-        runs-on: ubuntu-latest
+    first_job : 
+     runs-on: ubuntu-latest
 
         steps:
         - name: Welcome message
