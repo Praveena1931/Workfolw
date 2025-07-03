@@ -20,17 +20,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: welcome message
-        run: |
+        run: | #Pipe symbol used to pass multiple commands
           echo "first github action jobs"
           ls -ltr
           cat README.md
 
+      # - name: List files      #   run: ls ;      # - name: read file      #   run: cat README.md
+
       - name: Generate ASCII Artwork
         run: cowsay -f dragon "Run for cover, I am Dragon ... RAWR" >> dragon.txt
 
-
-      # - name: List files
-      #   run: ls 
-
-      # - name: read file
-      #   run: cat README.md
+    #cowsayInvoke the cowsay program, #-fdragon	Uses the "dragon" character (instead of the default cow)
+    #  "Run for cover...RAWR"The message you want the dragon to say, #>> dragon.txtsends the output to a file called dragon.txt (creates it if it doesn't exist)
+      
