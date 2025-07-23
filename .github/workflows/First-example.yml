@@ -6,15 +6,6 @@ jobs:
     first_job : 
      runs-on: ubuntu-latest
      steps:
-      #Adding actions/checkout in your GitHub Actions YAML file is essential because,
-      #it tells the workflow to clone your repository’s code into the runner environment so it can actually do something with it.
-      #🧠 What Happens Without It?# If you skip this step, your workflow will fail with errors like:
-      # file not found  #  command not recognized #   no such directory
-      #Because the runner has no idea what files you're referring to — they were never downloaded!
-      #🛡 Bonus: It Also Handles Authentication
-      #actions/checkout also:    #Authenticates using the GitHub token   #Supports checking out private repos
-      # Can fetch specific branches, tags, or commits    #Works with Git LFS and submodules if needed
-
 
       - name: checkout Repo 
         uses: actions/checkout@v4
@@ -24,8 +15,6 @@ jobs:
           echo "first github action jobs"
           ls -ltr
           cat README.md
-
-      # - name: List files      #   run: ls ;      # - name: read file      #   run: cat README.md
 
       - name: Generate ASCII Artwork
         run: cowsay -f dragon "Run for cover, I am Dragon ... RAWR" >> dragon.txt
