@@ -15,7 +15,10 @@ jobs:
       run: ls -ltra
 
     - name: executing shell script
-      run: ./ascii-script.sh
+      run: |
+        chmod +x ascii-script.sh
+        .github\workflows\ascii-script.sh
+
 
     # - name: Install Cowsay Program
     #   run: sudo apt-get install cowsay -y
