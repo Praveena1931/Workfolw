@@ -7,28 +7,29 @@ jobs:
   build_job_1:
     runs-on: ubuntu-latest
     steps:
+    - name: Install Cowsay Program
+      run: sudo apt-get install cowsay -y
 
-    - name: checkout Repo 
-      uses: actions/checkout@v4
-   
-    - name: List repo files
-      run: ls -ltra
+    - name: Execute Cowsay CMD
+      run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+    
+    - name: sleep for 10 seconds
+      run: sleep 10
+ 
+  test_job_2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sleep for 5 seconds
+      run: sleep 05
+      
+    - name: Test File Exists
+      run: grep -i "dragon" dragon.txt
 
-    - name: executing shell script
-      run: |
-        chmod +x .github/workflows/ascii-script.sh
-        .github/workflows/ascii-script.sh
-
-
-    # - name: Install Cowsay Program
-    #   run: sudo apt-get install cowsay -y
-
-    # - name: Execute Cowsay CMD
-    #   run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
-
-    # - name: Test File Exists
-    #   run: grep -i "dragon" dragon.txt
-
-    # - name: Read File
-    #   run: cat dragon.txt
-
+  deploy_job_3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Read File
+      run: cat dragon.txt
+       
+    - name: Deploy
+      run: echo Deploying ... .. .
