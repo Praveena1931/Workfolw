@@ -32,3 +32,9 @@ to store data once a workflow is completed you can use *upload artifact* and use
 
 Step 9 Working with variables at diff levels --action no 01 (exploring variables and secrets)
 Added variables-secrets.yml file to use variables, inthis we used variables at workflow level so that all jobs and steps can use them during execution, for first run we have hardcoded variables values inside the workflow only
+
+Step 10 used github secrets --action no 02 (exploring variables and secrets)
+same like above we have added secrets in github repository instead of hardcoding it at workflow
+
+Step 11 used workflow dispatch to trigger workflow
+added workflow_dispatch command to manually run the workflow after commiting new window is paopulated at actions tab to manually trigger the workflow
