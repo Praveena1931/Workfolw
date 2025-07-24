@@ -27,7 +27,8 @@ Step 7 Added Needs command to make jobs dependent on each other --action no 12 (
 added needs: syntax for test and deploy jobs so that multiple jobs run in sequence.after pushing test job awill fail because its dependent on build jobs o/p file. By default o/p files are not accessible within jobs we have to provide artifacts commands to access files from one job to another job
 As the test job failed deploy job will be skipped because it is dependent on test job
 
-Step 8 Sharing files from one job to another
+Step 8 Sharing files from one job to another --action no 13 (generate-cowsay.yml)
 to store data once a workflow is completed you can use *upload artifact* and use that stored o/p in another job use *download  atrifact*  added upload artifact in build to store o/p file and download artifact in test and deploy to use that stored o/p file. once the jobs is successful you can see Artifacts column is added actions workflow console
 
-Step 9 Working with variables at diff levels
+Step 9 Working with variables at diff levels --action no 01 (exploring variables and secrets)
+Added variables-secrets.yml file to use variables, inthis we used variables at workflow level so that all jobs and steps can use them during execution, for first run we have hardcoded variables values inside the workflow only
