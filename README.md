@@ -28,4 +28,6 @@ added needs: syntax for test and deploy jobs so that multiple jobs run in sequen
 As the test job failed deploy job will be skipped because it is dependent on test job
 
 Step 8 Sharing files from one job to another
-to store data once a workflow is completed you can use *upload artifact* and use that stored o/p in another job use *download  atrifact*  added upload artifact in build to store o/p file and download artifact in test and deploy to use that stored o/p file
+to store data once a workflow is completed you can use *upload artifact* and use that stored o/p in another job use *download  atrifact*  added upload artifact in build to store o/p file and download artifact in test and deploy to use that stored o/p file. once the jobs is successful you can see Artifacts column is added actions workflow console
+
+Step 9 Working with variables at diff levels
