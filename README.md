@@ -46,4 +46,7 @@ Step 13 timeout for jobs and steps --action no 06 (exploring variables and secre
 By default github will kill the long running workflows after 6 hours, so timeout option will make sure that if job dosen't get completed in specific time it will cancel that job, it will be provided in minutes.
 
 step 14 matrix configuration
-this lets you use a variable in single job defn which automayically cerates multiple jobs that run in parallel and is based on cobn of variables which we pass. it could be used to run single job in multiple versions and on multiple os as well
+this lets you use a variable in single job defn which automayically cerates multiple jobs that run in parallel and is based on combn of variables which we pass. it could be used to run single job in multiple versions and on multiple os as well
+ 
+ Step 15 workflow context
+ check in github docs to know more about synatxes and diff context types. basicall it shows everything which its using to run workflow and to what extent it can read or show values or secrets
