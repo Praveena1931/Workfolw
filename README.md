@@ -39,5 +39,8 @@ same like above we have added secrets in github repository instead of hardcoding
 Step 11 used workflow dispatch to trigger workflow --action no 03 (exploring variables and secrets)
 added workflow_dispatch command to manually run the workflow after commiting new window is paopulated at actions tab to manually trigger the workflow
 
-Step 12 added job concurrency step
-syntax is concurrency: enter group: example deployment(any name) enter cancel-in-progress: true (any workflow which is currently running it will cancel that workflow and start running new workflow) added sleep cmnd also so that deploy job waits for sometime to rum meanwhile we can rum same workflow one more time to check concurrency
+Step 12 added job concurrency step --action no 04 and 05 (exploring variables and secrets)
+syntax is concurrency: enter group: example deployment(any name) enter cancel-in-progress: true (any workflow which is currently running it will cancel that workflow and start running new workflow) added sleep cmnd also so that deploy job waits for sometime to rum meanwhile we can rum same workflow one more time to check concurrency if we give cancle-in-progress as false new one will wait for the first one to get complete.
+
+Step 13 timeout for jobs and steps
+By default github will kill the long running workflows after 6 hours, so timeout option will make sure that if job dosen't get completed in specific time it will cancel that job, it will be provided in minutes
