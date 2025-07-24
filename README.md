@@ -36,5 +36,8 @@ Added variables-secrets.yml file to use variables, inthis we used variables at w
 Step 10 used github secrets --action no 02 (exploring variables and secrets)
 same like above we have added secrets in github repository instead of hardcoding it at workflow
 
-Step 11 used workflow dispatch to trigger workflow
+Step 11 used workflow dispatch to trigger workflow --action no 03 (exploring variables and secrets)
 added workflow_dispatch command to manually run the workflow after commiting new window is paopulated at actions tab to manually trigger the workflow
+
+Step 12 added job concurrency step
+syntax is concurrency: enter group: example deployment(any name) enter cancel-in-progress: true (any workflow which is currently running it will cancel that workflow and start running new workflow) added sleep cmnd also so that deploy job waits for sometime to rum meanwhile we can rum same workflow one more time to check concurrency
