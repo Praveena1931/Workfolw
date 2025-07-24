@@ -42,5 +42,8 @@ added workflow_dispatch command to manually run the workflow after commiting new
 Step 12 added job concurrency step --action no 04 and 05 (exploring variables and secrets)
 syntax is concurrency: enter group: example deployment(any name) enter cancel-in-progress: true (any workflow which is currently running it will cancel that workflow and start running new workflow) added sleep cmnd also so that deploy job waits for sometime to rum meanwhile we can rum same workflow one more time to check concurrency if we give cancle-in-progress as false new one will wait for the first one to get complete.
 
-Step 13 timeout for jobs and steps
-By default github will kill the long running workflows after 6 hours, so timeout option will make sure that if job dosen't get completed in specific time it will cancel that job, it will be provided in minutes
+Step 13 timeout for jobs and steps --action no 06 (exploring variables and secrets)
+By default github will kill the long running workflows after 6 hours, so timeout option will make sure that if job dosen't get completed in specific time it will cancel that job, it will be provided in minutes.
+
+step 14 matrix configuration
+this lets you use a variable in single job defn which automayically cerates multiple jobs that run in parallel and is based on cobn of variables which we pass. it could be used to run single job in multiple versions and on multiple os as well
